@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+       .myWork{
+        width: 100%;
+        height: 1000px;
+        background-image: url(../../../Downloads/heerrroo.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-blend-mode: darken;
+        background-color: rgba(0, 0, 0, 0.448);
+        text-align: center;
+        padding-top: 150px;
+        display: flex;
+        flex-direction: column;
+        gap: 350px;
+       }
+       .inputt{
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+       }
+       .inputt input{
+        width: 300px;
+        height: 50px;
+       }
+       .inputt button{
+        width: 100px;
+        height: 50px;
+       }
+       #myDivAns{
+        width: 900px;
+        height: 90px;
+        background-color: whitesmoke;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 400px;
+        border-radius: 30px;
+       }
+
+    </style>
+</head>
+<body>
+    <div class="myWork">
+        <div class="inputt">
+            <input id="myMonth" type="text"> <button onclick="showMyAns()"> click me </button>
+        </div>
+
+
+        <div id="myDivAns">
+
+        </div>
+    </div>
+    
+
+</body>
+</html>
+<script>
+let myInput = document.getElementById('myMonth')
+let myDiv = document.getElementById('myDivAns')
+
+function showMyAns() {
+    let month = myInput.value
+
+    if (month === 'january') {
+        myDiv.innerText = 'January has 31 days.'
+        
+    } else if(month === 'JANUARY'){
+        myDiv.innerText = 'January has 31 day'
+
+    } else if(month === 'February'){
+        myDiv.innerText = 'February has 28 day'
+        
+    } else if(month === 'FEbruary'){
+        myDiv.innerText = 'February has 28 day'
+        
+    } else{
+        myDiv.innerText = 'invalid months'
+
+    }
+}
+
+
+
+
+
+</script>

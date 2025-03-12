@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <img src="buld-on.jpg" width="200" height="200"> -->
+
+    <button onclick="changeBackground()"> light/dark </button>
+
+
+    <img id="image" src="bulb-off.jpeg" width="200" height="200">
+
+
+    <button onclick="switchBulb()">click me</button>
+</body>
+</html>
+<script>
+
+
+let num = 20
+
+if (num > 0) {
+
+    num += 1
+    
+    
+}
+
+let weather = 'sunny'
+
+if (weather === 'sunny') {
+    console.log('its sunny outside, get a shade');
+    
+} else if(weather === 'rainy') {
+    console.log('its rainy outside, get umbrella');
+    
+} else if(weather === 'windy') {
+    console.log('weather is windy');
+    
+} else if(weather === 'snowy') {
+    console.log('weather is snowy');
+    
+} else {
+    console.log('weather is normal');
+    
+    
+}
+
+
+let key = 'wednesday '.trim().toLowerCase()
+
+switch (key) {
+    case 'monday':
+        console.log('wow, the week just started');
+        break;
+    case 'tuesday':
+        console.log('wow, its tuesday already');
+        break;
+    case 'wednesday':
+        console.log('wow, its conditionals day');
+        break;
+    default:
+        console.log('wow im not aware of this day');
+        
+        break;
+}
+
+
+// 2 === '2' ?
+
+let isBulbOn = false
+
+function switchBulb() {
+    if (isBulbOn === false) {
+        document.getElementById('image').src = 'buld-on.jpg'
+        // isBulbOn = true
+    } else {
+        document.getElementById('image').src = 'bulb-off.jpeg'
+        // isBulbOn = false
+    }
+
+    isBulbOn = !isBulbOn
+}
+
+
+
+    document.body.style.backgroundImage = 'url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9EZNefY1fRsA4qVFTBviWyj-5KHY6U8LG0g&s)'
+    document.body.style.backgroundRepeat = 'no-repeat'
+    document.body.style.backgroundSize = 'cover'
+
+
+
+function changeBackground() {
+    // console.log(document.body.style.backgroundColor);
+
+    //     if (document.body.style.backgroundColor === '') {
+    //         document.body.style.backgroundColor = 'black'
+    //     } else {
+    //         document.body.style.backgroundColor = ''
+    //     }
+
+        console.log(document.body.style.backgroundImage);
+
+        document.body.style.backgroundImage == 'url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9EZNefY1fRsA4qVFTBviWyj-5KHY6U8LG0g&s")'
+            ?
+            document.body.style.backgroundImage = 'url(https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/f8/5c/05/picture-lake.jpg?w=1200&h=-1&s=1)'
+            :
+            document.body.style.backgroundImage = 'url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9EZNefY1fRsA4qVFTBviWyj-5KHY6U8LG0g&s)'
+
+
+}
+
+
+
+    
+</script>
