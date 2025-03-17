@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+
+    //not possible with strings
+    let string = 'hello'
+     string[3] = 'y'
+ 
+     let arr = ['1', '2', '3', '4', '1', '2', '1']
+     let myArr = new Array(20).fill(5)
+     let arrLength = myArr.length
+     console.log(myArr);
+     console.log(arrLength);
+ 
+     //very possible with array
+     console.log(arr[2]);
+     console.log(arr);
+     //modifying an array
+     arr[2] = undefined
+     console.log(arr);
+ 
+ 
+     let firstList = [1, 2, 3]
+     let secondList = [4, 5, 6]
+     let thirdList = [7, 8, 9]
+     let forthList = [10, 11, 12]
+     let fifthList = firstList.concat(secondList, thirdList, forthList)
+     console.log(fifthList);
+ 
+     //indexOf in strings
+     let string1 = 'javascrip t'
+     console.log(string1.indexOf('scrip'));
+ 
+     //indexOf in arrays
+     console.log(arr.lastIndexOf('1'));
+ 
+     console.log(typeof arr);
+     console.log(Array.isArray(arr));
+ 
+     let newArr = ['hello', 'js', 'david', 'dan']
+     console.log(newArr.join(' , '));
+ 
+ 
+ 
+     let myString = 'jello'
+     myString.substr(2, 3)
+     myString.substring(2, 5)
+     myString.slice(2, 5)
+ 
+ 
+     let newarr2 = newArr.slice(1, 3);
+     newArr.splice(2, 1, 'is', 'a', 'friend', 'with')
+     // newArr.splice(0, 2, 'hmmm' , 'wow' , 'i can add any amount')
+     console.log(newArr);
+ 
+ 
+ 
+     // prompt('enter a name', 'type name here')
+    //  confirm('are you sure?')
+
+
+
+
+
+
+
+</script>
