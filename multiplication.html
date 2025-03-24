@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .everything{
+            background-color: brown;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-content: start;
+            padding: 30px;
+        }
+        #box{
+            display: flex;
+            width: 300px;
+            height: 40px;
+            gap: 5px;
+        }
+        button{
+            background-color: aqua;
+        }
+        button p{
+            width: 80px;
+            display: flex;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+        }
+        #myResult{
+            height: 600px;
+            background-color: beige;
+            display: flex;
+            gap: 10px;
+            box-shadow: 16px 16px rgba(128, 128, 128, 0.481);
+            
+        }
+
+    </style>
+</head>
+<body>
+    <div class="everything">
+        <div id="box">
+            <input id="value1" type="text">
+            <input id="value2" type="text">
+            <button onclick="multiplyTask"> <p>Click Me</p> </button>
+        </div>
+
+        <div id="myResult">
+
+        </div>
+
+    </div>
+</body>
+</html>
+<script>
+
+
+window.alert('missing the class is affecting me 🤦🏽‍♂️')
+
+    let value1 = document.getElementById("value1");
+    let value2 = document.getElementById("value2");
+    let display = document.getElementById("myResult");
+
+    function multiplyTask() {
+        let multiply = Number(value1.value);
+        let multiply2 = Number(value2.value);
+        let multiply3 = ''
+        
+        for (let m = multiply; m <= multiply2; m++) {
+            for (let n = 1; n <= 12; n++) {
+                multiply3 = `${m} * ${n} = ${m * n}`
+            }
+        }
+        if (multiply === "" && multiply2 === "") {
+            alert("Type a value inside the input")
+        }
+
+        for (let m = multiply; m >= multiply2; m--) {
+            for (let n = 1; n >= 12; n--) {
+                multiply3 = `${m} * ${n} = ${m * n}`
+            }
+            
+        }
+        return multiply3
+        display.innerHTML = multiply3
+        
+    
+    }
+
+
+
+</script>
